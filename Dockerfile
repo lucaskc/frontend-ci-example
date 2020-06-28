@@ -1,13 +1,13 @@
 # 1. Install all dependencies and run yarn build
-FROM node:alpine as builder
+FROM node:alpine
 
 WORKDIR '/app'
-COPY package.json .
+COPY package.json ./
 RUN yarn install
-COPY . .
+COPY ./ ./
 RUN yarn build
 
 # 2. Run: use nginx to serve build static files
 FROM nginx
 EXPOSE 80
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=0 /app/build /usr/share/nginx/html
