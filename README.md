@@ -2,6 +2,8 @@
 
 Docker compose that handles two services, one for starting the webapp and another to run the tests.
 
+## Dev env
+
 ### to run
 ```docker-compose up```
 
@@ -13,3 +15,11 @@ Docker compose that handles two services, one for starting the webapp and anothe
 
 ### to access the web app from your browser
 ```localhost:3000```
+
+## Prod env
+
+### to build
+```docker build -t lucaskc/frontend-prod .```
+
+### to run
+```docker run -p 8080:80 lucaskc/frontend-prod```
