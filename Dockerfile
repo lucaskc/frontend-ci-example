@@ -9,4 +9,5 @@ RUN yarn build
 
 # 2. Run: use nginx to serve build static files
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
