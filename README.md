@@ -18,8 +18,8 @@ Docker compose that handles two services, one for starting the webapp and anothe
 
 ## Prod env
 
-### to build
+### to build (manually)
 ```docker build -t lucaskc/frontend-prod .```
 
-### to run
+### to run (manually)
 ```docker run -p 8080:80 lucaskc/frontend-prod```
